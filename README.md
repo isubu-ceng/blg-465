@@ -1,4 +1,4 @@
-# blg-465
+# BLG-465
 
 A sample Python project demonstrating CI/CD pipeline processes with testing, linting, and automated workflows.
 
