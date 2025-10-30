@@ -43,8 +43,8 @@ def demonstrate_dict_merge(
     Demonstrate dictionary merge using the | operator.
 
     This function uses two Python 3.9+ features:
-    1. Generic dict type syntax: dict[str, int] instead of Dict[str, int]
-    2. Dictionary merge operator: dict1 | dict2
+    1. Generic dict type syntax: dict[str, int] (fails in Python 3.8)
+    2. Dictionary merge operator: dict1 | dict2 (fails in Python 3.8)
 
     Args:
         dict1: First dictionary
@@ -54,9 +54,8 @@ def demonstrate_dict_merge(
         Merged dictionary
 
     Raises:
-        TypeError: In Python 3.8, this will fail due to:
-                   - Unsupported generic type syntax
-                   - Unsupported dictionary merge operator
+        TypeError: In Python 3.8, this will fail due to both features
+                   being unsupported (introduced in Python 3.9)
     """
     return dict1 | dict2
 
