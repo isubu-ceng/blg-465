@@ -65,6 +65,23 @@ Check code style with flake8:
 flake8 calculator.py test_calculator.py
 ```
 
+## Python Version Compatibility Example
+
+The file `python38_error_example.py` demonstrates code that will fail in
+Python 3.8 but works correctly in Python 3.10+. It uses features like:
+
+- **Union type syntax** (`int | str`) - Python 3.10+ feature
+- **Generic dict syntax** (`dict[str, int]`) - Python 3.9+ feature
+- **Dictionary merge operator** (`|`) - Python 3.9+ feature
+
+Running this file in Python 3.8 will produce a `TypeError`, while it runs
+successfully in Python 3.10 and later versions.
+
+```python
+# This will fail in Python 3.8
+python python38_error_example.py  # Works in Python 3.10+
+```
+
 ## CI/CD Pipeline
 
 This project uses GitHub Actions for continuous integration:
@@ -82,13 +99,14 @@ Workflows are automatically triggered on:
 blg-465/
 ├── .github/
 │   └── workflows/
-│       ├── ci.yml          # CI testing workflow
-│       └── lint.yml        # Linting workflow
-├── calculator.py           # Main calculator module
-├── test_calculator.py      # Unit tests
-├── requirements.txt        # Python dependencies
-├── .gitignore             # Git ignore rules
-└── README.md              # This file
+│       ├── ci.yml                   # CI testing workflow
+│       └── lint.yml                 # Linting workflow
+├── calculator.py                    # Main calculator module
+├── test_calculator.py               # Unit tests
+├── python38_error_example.py        # Python 3.8 incompatibility example
+├── requirements.txt                 # Python dependencies
+├── .gitignore                      # Git ignore rules
+└── README.md                       # This file
 ```
 
 ## Contributing
