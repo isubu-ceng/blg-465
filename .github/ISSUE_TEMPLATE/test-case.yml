@@ -1,0 +1,82 @@
+name: Test Case
+description: Create a new test case
+title: "[TEST]: "
+labels: ["test-case"]
+body:
+  - type: input
+    id: test-id
+    attributes:
+      label: Test ID
+      description: Unique test identifier
+      placeholder: "TC-001"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Test Description
+      description: What are you testing?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: Prerequisites before running this test
+  
+  - type: textarea
+    id: steps
+    attributes:
+      label: Test Steps
+      description: Step by step instructions
+      placeholder: |
+        1. Navigate to...
+        2. Click on...
+        3. Verify that...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should happen?
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Not Tested
+        - Passed
+        - Failed
+        - Blocked
+    validations:
+      required: true
+  
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual Result
+      description: What actually happened during test execution?
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: Test Notes
+      description: Additional notes, screenshots, or observations
