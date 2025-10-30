@@ -9,6 +9,15 @@ Python 3.10. In Python 3.8, this will raise a TypeError because the
 '|' operator is not supported for type annotations.
 """
 
+import sys
+
+# Check Python version compatibility
+if sys.version_info < (3, 10):
+    raise RuntimeError(
+        f"This module requires Python 3.10 or higher. "
+        f"Current version: {sys.version_info.major}.{sys.version_info.minor}"
+    )
+
 
 def process_value(value: int | str) -> str:
     """
