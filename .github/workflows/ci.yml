@@ -26,11 +26,11 @@ jobs:
     
     - name: Run tests with pytest
       run: |
-        pytest test_calculator.py -v --cov=calculator --cov-report=term-missing
+        pytest test_calculator.py test_python38_error_example.py -v --cov=calculator --cov-report=term-missing
     
     - name: Generate coverage report
       run: |
-        pytest test_calculator.py --cov=calculator --cov-report=xml
+        pytest test_calculator.py test_python38_error_example.py --cov=calculator --cov-report=xml
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
