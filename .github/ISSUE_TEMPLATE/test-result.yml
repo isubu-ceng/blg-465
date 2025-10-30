@@ -1,0 +1,88 @@
+name: Test Result
+description: Record test execution result
+title: "[TEST RESULT]: "
+labels: ["test-result"]
+body:
+  - type: input
+    id: test-id
+    attributes:
+      label: Test Case ID
+      description: Related test case ID
+      placeholder: "TC-001"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: result
+    attributes:
+      label: Test Result
+      options:
+        - ✅ Passed
+        - ❌ Failed
+        - ⏸️ Blocked
+        - ⏭️ Skipped
+    validations:
+      required: true
+  
+  - type: input
+    id: test-date
+    attributes:
+      label: Test Date
+      description: When was this test executed?
+      placeholder: "2025-10-30"
+    validations:
+      required: true
+  
+  - type: input
+    id: tester
+    attributes:
+      label: Tester
+      description: Who executed this test?
+    validations:
+      required: true
+  
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Test environment (Dev, Staging, Production)
+      placeholder: "Production"
+  
+  - type: input
+    id: browser
+    attributes:
+      label: Browser/Platform
+      description: Browser or platform used for testing
+      placeholder: "Chrome 119 / Windows 11"
+  
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual Result
+      description: What actually happened?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps-executed
+    attributes:
+      label: Steps Executed
+      description: Detailed steps that were executed
+  
+  - type: textarea
+    id: defects
+    attributes:
+      label: Defects Found
+      description: Any bugs or issues discovered
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Evidence
+      description: Add screenshots or other evidence
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any other relevant information
