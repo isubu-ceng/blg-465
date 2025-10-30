@@ -15,7 +15,7 @@ def add(a, b):
     Returns:
         The sum of a and b
     """
-    return a - b  # Bug: using subtraction instead of addition
+    return a + b
 
 
 def subtract(a, b):
